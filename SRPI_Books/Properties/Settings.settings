@@ -1,0 +1,69 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Uni_Books.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="LV1_A" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">213, 223, 208</Value>
+    </Setting>
+    <Setting Name="LV1_B" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">207, 206, 244</Value>
+    </Setting>
+    <Setting Name="LV2_A" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">230, 235, 249</Value>
+    </Setting>
+    <Setting Name="LV2_B" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">230, 238, 225</Value>
+    </Setting>
+    <Setting Name="filename" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Data\Accounts_Data.dat</Value>
+    </Setting>
+    <Setting Name="pwd" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="app_key" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SRPI_B642_JM21_CWFA</Value>
+    </Setting>
+    <Setting Name="auto_acct_ids" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="auto_date" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="Account_descr" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Account</Value>
+    </Setting>
+    <Setting Name="Count_descr" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Count</Value>
+    </Setting>
+    <Setting Name="Increase_descr" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Increase</Value>
+    </Setting>
+    <Setting Name="Decrease_descr" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Decrease</Value>
+    </Setting>
+    <Setting Name="Nothing_descr" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Nothing</Value>
+    </Setting>
+    <Setting Name="Whole_Numbers" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="Keep_Time" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="Acct_Show_Balance" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="Acct_Show_Average" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="Default_activity" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Count</Value>
+    </Setting>
+    <Setting Name="Default_amount" Type="System.Decimal" Scope="User">
+      <Value Profile="(Default)">1.00</Value>
+    </Setting>
+    <Setting Name="Amount_format" Type="System.String" Scope="User">
+      <Value Profile="(Default)">$#,###,##0.00</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

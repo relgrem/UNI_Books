@@ -1,0 +1,14 @@
+C:\Users\WE_R!!!\source\repos\SRPI_Books\SRPI_Books\obj\Debug\SRPI_Books.csprojAssemblyReference.cache
+C:\Users\WE_R!!!\source\repos\SRPI_Books\SRPI_Books\obj\Debug\SRPI_Books.fmrNewAction.resources
+C:\Users\WE_R!!!\source\repos\SRPI_Books\SRPI_Books\obj\Debug\SRPI_Books.frmMain.resources
+C:\Users\WE_R!!!\source\repos\SRPI_Books\SRPI_Books\obj\Debug\SRPI_Books.frmNewACCT.resources
+C:\Users\WE_R!!!\source\repos\SRPI_Books\SRPI_Books\obj\Debug\SRPI_Books.Properties.Resources.resources
+C:\Users\WE_R!!!\source\repos\SRPI_Books\SRPI_Books\obj\Debug\SRPI_Books.csproj.GenerateResource.cache
+C:\Users\WE_R!!!\source\repos\SRPI_Books\SRPI_Books\obj\Debug\SRPI_Books.csproj.CoreCompileInputs.cache
+C:\Users\WE_R!!!\source\repos\SRPI_Books\SRPI_Books\bin\Debug\SRPI_Books.exe.config
+C:\Users\WE_R!!!\source\repos\SRPI_Books\SRPI_Books\bin\Debug\SRPI_Books.exe
+C:\Users\WE_R!!!\source\repos\SRPI_Books\SRPI_Books\bin\Debug\SRPI_Books.pdb
+C:\Users\WE_R!!!\source\repos\SRPI_Books\SRPI_Books\obj\Debug\SRPI_Books.exe
+C:\Users\WE_R!!!\source\repos\SRPI_Books\SRPI_Books\obj\Debug\SRPI_Books.pdb
+C:\Users\WE_R!!!\source\repos\SRPI_Books\SRPI_Books\obj\Debug\SRPI_Books.frmEnter1.resources
+C:\Users\WE_R!!!\source\repos\SRPI_Books\SRPI_Books\obj\Debug\SRPI_Books.frmSettings.resources
