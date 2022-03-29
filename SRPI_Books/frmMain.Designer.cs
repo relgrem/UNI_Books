@@ -43,11 +43,18 @@
             this.cmdExport = new System.Windows.Forms.ToolStripSplitButton();
             this.mnuExport_Bal = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuExport_All = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmdClearAll = new System.Windows.Forms.ToolStripButton();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.LV_Accounts = new System.Windows.Forms.ListView();
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chAverage = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.pnlSearch = new System.Windows.Forms.Panel();
+            this.cmdRefreshFilter = new System.Windows.Forms.Button();
+            this.txtSearchName = new System.Windows.Forms.TextBox();
+            this.cmdUnfilter = new System.Windows.Forms.Button();
+            this.txtSearchID = new System.Windows.Forms.TextBox();
             this.LV_Activity = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -58,21 +65,14 @@
             this.lblACCTNumber = new System.Windows.Forms.Label();
             this.SD = new System.Windows.Forms.SaveFileDialog();
             this.TMR = new System.Windows.Forms.Timer(this.components);
-            this.chAverage = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.cmdClearAll = new System.Windows.Forms.ToolStripButton();
-            this.pnlSearch = new System.Windows.Forms.Panel();
-            this.txtSearchID = new System.Windows.Forms.TextBox();
-            this.cmdUnfilter = new System.Windows.Forms.Button();
-            this.txtSearchName = new System.Windows.Forms.TextBox();
-            this.cmdRefreshFilter = new System.Windows.Forms.Button();
             this.SS.SuspendLayout();
             this.TS.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            this.pnlACCT.SuspendLayout();
             this.pnlSearch.SuspendLayout();
+            this.pnlACCT.SuspendLayout();
             this.SuspendLayout();
             // 
             // SS
@@ -179,13 +179,13 @@
             this.cmdExport.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.cmdExport.Name = "cmdExport";
             this.cmdExport.Size = new System.Drawing.Size(32, 22);
-            this.cmdExport.Text = "toolStripSplitButton1";
+            this.cmdExport.Text = "Export Menu";
             // 
             // mnuExport_Bal
             // 
             this.mnuExport_Bal.Image = ((System.Drawing.Image)(resources.GetObject("mnuExport_Bal.Image")));
             this.mnuExport_Bal.Name = "mnuExport_Bal";
-            this.mnuExport_Bal.Size = new System.Drawing.Size(180, 22);
+            this.mnuExport_Bal.Size = new System.Drawing.Size(157, 22);
             this.mnuExport_Bal.Text = "Export Balances";
             this.mnuExport_Bal.Click += new System.EventHandler(this.mnuExport_Bal_Click);
             // 
@@ -193,9 +193,19 @@
             // 
             this.mnuExport_All.Image = ((System.Drawing.Image)(resources.GetObject("mnuExport_All.Image")));
             this.mnuExport_All.Name = "mnuExport_All";
-            this.mnuExport_All.Size = new System.Drawing.Size(180, 22);
+            this.mnuExport_All.Size = new System.Drawing.Size(157, 22);
             this.mnuExport_All.Text = "Export All Data";
             this.mnuExport_All.Click += new System.EventHandler(this.mnuExport_All_Click);
+            // 
+            // cmdClearAll
+            // 
+            this.cmdClearAll.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.cmdClearAll.Image = ((System.Drawing.Image)(resources.GetObject("cmdClearAll.Image")));
+            this.cmdClearAll.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.cmdClearAll.Name = "cmdClearAll";
+            this.cmdClearAll.Size = new System.Drawing.Size(23, 22);
+            this.cmdClearAll.Text = "Start Over";
+            this.cmdClearAll.Click += new System.EventHandler(this.cmdClearAll_Click);
             // 
             // splitContainer1
             // 
@@ -249,6 +259,66 @@
             this.columnHeader6.Text = "Balance";
             this.columnHeader6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.columnHeader6.Width = 113;
+            // 
+            // chAverage
+            // 
+            this.chAverage.Text = "Average";
+            this.chAverage.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.chAverage.Width = 0;
+            // 
+            // pnlSearch
+            // 
+            this.pnlSearch.Controls.Add(this.cmdRefreshFilter);
+            this.pnlSearch.Controls.Add(this.txtSearchName);
+            this.pnlSearch.Controls.Add(this.cmdUnfilter);
+            this.pnlSearch.Controls.Add(this.txtSearchID);
+            this.pnlSearch.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlSearch.Location = new System.Drawing.Point(0, 0);
+            this.pnlSearch.Name = "pnlSearch";
+            this.pnlSearch.Size = new System.Drawing.Size(403, 34);
+            this.pnlSearch.TabIndex = 1;
+            // 
+            // cmdRefreshFilter
+            // 
+            this.cmdRefreshFilter.Dock = System.Windows.Forms.DockStyle.Right;
+            this.cmdRefreshFilter.Image = ((System.Drawing.Image)(resources.GetObject("cmdRefreshFilter.Image")));
+            this.cmdRefreshFilter.Location = new System.Drawing.Point(323, 0);
+            this.cmdRefreshFilter.Name = "cmdRefreshFilter";
+            this.cmdRefreshFilter.Size = new System.Drawing.Size(40, 34);
+            this.cmdRefreshFilter.TabIndex = 3;
+            this.cmdRefreshFilter.UseVisualStyleBackColor = true;
+            this.cmdRefreshFilter.Click += new System.EventHandler(this.cmdRefreshFilter_Click);
+            // 
+            // txtSearchName
+            // 
+            this.txtSearchName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(252)))), ((int)(((byte)(209)))));
+            this.txtSearchName.Dock = System.Windows.Forms.DockStyle.Left;
+            this.txtSearchName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchName.Location = new System.Drawing.Point(144, 0);
+            this.txtSearchName.Name = "txtSearchName";
+            this.txtSearchName.Size = new System.Drawing.Size(144, 26);
+            this.txtSearchName.TabIndex = 2;
+            // 
+            // cmdUnfilter
+            // 
+            this.cmdUnfilter.Dock = System.Windows.Forms.DockStyle.Right;
+            this.cmdUnfilter.Image = ((System.Drawing.Image)(resources.GetObject("cmdUnfilter.Image")));
+            this.cmdUnfilter.Location = new System.Drawing.Point(363, 0);
+            this.cmdUnfilter.Name = "cmdUnfilter";
+            this.cmdUnfilter.Size = new System.Drawing.Size(40, 34);
+            this.cmdUnfilter.TabIndex = 1;
+            this.cmdUnfilter.UseVisualStyleBackColor = true;
+            this.cmdUnfilter.Click += new System.EventHandler(this.cmdUnfilter_Click);
+            // 
+            // txtSearchID
+            // 
+            this.txtSearchID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(252)))), ((int)(((byte)(209)))));
+            this.txtSearchID.Dock = System.Windows.Forms.DockStyle.Left;
+            this.txtSearchID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchID.Location = new System.Drawing.Point(0, 0);
+            this.txtSearchID.Name = "txtSearchID";
+            this.txtSearchID.Size = new System.Drawing.Size(144, 26);
+            this.txtSearchID.TabIndex = 0;
             // 
             // LV_Activity
             // 
@@ -332,76 +402,6 @@
             this.TMR.Interval = 3600;
             this.TMR.Tick += new System.EventHandler(this.TMR_Tick);
             // 
-            // chAverage
-            // 
-            this.chAverage.Text = "Average";
-            this.chAverage.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.chAverage.Width = 0;
-            // 
-            // cmdClearAll
-            // 
-            this.cmdClearAll.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.cmdClearAll.Image = ((System.Drawing.Image)(resources.GetObject("cmdClearAll.Image")));
-            this.cmdClearAll.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.cmdClearAll.Name = "cmdClearAll";
-            this.cmdClearAll.Size = new System.Drawing.Size(23, 22);
-            this.cmdClearAll.Text = "Start Over";
-            this.cmdClearAll.Click += new System.EventHandler(this.cmdClearAll_Click);
-            // 
-            // pnlSearch
-            // 
-            this.pnlSearch.Controls.Add(this.cmdRefreshFilter);
-            this.pnlSearch.Controls.Add(this.txtSearchName);
-            this.pnlSearch.Controls.Add(this.cmdUnfilter);
-            this.pnlSearch.Controls.Add(this.txtSearchID);
-            this.pnlSearch.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSearch.Location = new System.Drawing.Point(0, 0);
-            this.pnlSearch.Name = "pnlSearch";
-            this.pnlSearch.Size = new System.Drawing.Size(403, 34);
-            this.pnlSearch.TabIndex = 1;
-            // 
-            // txtSearchID
-            // 
-            this.txtSearchID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(252)))), ((int)(((byte)(209)))));
-            this.txtSearchID.Dock = System.Windows.Forms.DockStyle.Left;
-            this.txtSearchID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchID.Location = new System.Drawing.Point(0, 0);
-            this.txtSearchID.Name = "txtSearchID";
-            this.txtSearchID.Size = new System.Drawing.Size(144, 26);
-            this.txtSearchID.TabIndex = 0;
-            // 
-            // cmdUnfilter
-            // 
-            this.cmdUnfilter.Dock = System.Windows.Forms.DockStyle.Right;
-            this.cmdUnfilter.Image = ((System.Drawing.Image)(resources.GetObject("cmdUnfilter.Image")));
-            this.cmdUnfilter.Location = new System.Drawing.Point(363, 0);
-            this.cmdUnfilter.Name = "cmdUnfilter";
-            this.cmdUnfilter.Size = new System.Drawing.Size(40, 34);
-            this.cmdUnfilter.TabIndex = 1;
-            this.cmdUnfilter.UseVisualStyleBackColor = true;
-            this.cmdUnfilter.Click += new System.EventHandler(this.cmdUnfilter_Click);
-            // 
-            // txtSearchName
-            // 
-            this.txtSearchName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(252)))), ((int)(((byte)(209)))));
-            this.txtSearchName.Dock = System.Windows.Forms.DockStyle.Left;
-            this.txtSearchName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchName.Location = new System.Drawing.Point(144, 0);
-            this.txtSearchName.Name = "txtSearchName";
-            this.txtSearchName.Size = new System.Drawing.Size(144, 26);
-            this.txtSearchName.TabIndex = 2;
-            // 
-            // cmdRefreshFilter
-            // 
-            this.cmdRefreshFilter.Dock = System.Windows.Forms.DockStyle.Right;
-            this.cmdRefreshFilter.Image = ((System.Drawing.Image)(resources.GetObject("cmdRefreshFilter.Image")));
-            this.cmdRefreshFilter.Location = new System.Drawing.Point(323, 0);
-            this.cmdRefreshFilter.Name = "cmdRefreshFilter";
-            this.cmdRefreshFilter.Size = new System.Drawing.Size(40, 34);
-            this.cmdRefreshFilter.TabIndex = 3;
-            this.cmdRefreshFilter.UseVisualStyleBackColor = true;
-            this.cmdRefreshFilter.Click += new System.EventHandler(this.cmdRefreshFilter_Click);
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -423,10 +423,10 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            this.pnlACCT.ResumeLayout(false);
-            this.pnlACCT.PerformLayout();
             this.pnlSearch.ResumeLayout(false);
             this.pnlSearch.PerformLayout();
+            this.pnlACCT.ResumeLayout(false);
+            this.pnlACCT.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

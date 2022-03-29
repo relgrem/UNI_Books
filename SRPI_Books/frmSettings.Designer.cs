@@ -36,6 +36,10 @@
             this.cmdCancel = new System.Windows.Forms.Button();
             this.cmdOK = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.txtAmountFormat = new System.Windows.Forms.TextBox();
+            this.chkShowAverage = new System.Windows.Forms.CheckBox();
+            this.chkShowBalance = new System.Windows.Forms.CheckBox();
             this.pic1B = new System.Windows.Forms.PictureBox();
             this.pic1A = new System.Windows.Forms.PictureBox();
             this.CD = new System.Windows.Forms.ColorDialog();
@@ -47,14 +51,21 @@
             this.txtFile = new System.Windows.Forms.TextBox();
             this.cmdFileName = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.txtPwd2 = new System.Windows.Forms.TextBox();
             this.txtPwd = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.chkTimestamp = new System.Windows.Forms.CheckBox();
             this.chkAutoIDs = new System.Windows.Forms.CheckBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.txtDesc = new System.Windows.Forms.TextBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.cmbDesc_Nothing = new System.Windows.Forms.ComboBox();
+            this.cmbDesc_Decrease = new System.Windows.Forms.ComboBox();
+            this.cmbDesc_Increase = new System.Windows.Forms.ComboBox();
+            this.cmbDesc_Count = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -66,31 +77,21 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.cmbDesc_Count = new System.Windows.Forms.ComboBox();
-            this.cmbDesc_Increase = new System.Windows.Forms.ComboBox();
-            this.cmbDesc_Decrease = new System.Windows.Forms.ComboBox();
-            this.cmbDesc_Nothing = new System.Windows.Forms.ComboBox();
             this.chkWholeNumbers = new System.Windows.Forms.CheckBox();
             this.chkKeepTime = new System.Windows.Forms.CheckBox();
-            this.chkShowBalance = new System.Windows.Forms.CheckBox();
-            this.chkShowAverage = new System.Windows.Forms.CheckBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.cmbDefault_Activity = new System.Windows.Forms.ComboBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tbFile = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.txtAmount = new System.Windows.Forms.TextBox();
-            this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.txtAmountFormat = new System.Windows.Forms.TextBox();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.groupBox9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic1B)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic1A)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -105,9 +106,8 @@
             this.tbFile.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage3.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            this.groupBox9.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -157,6 +157,7 @@
             this.cmdCancel.TabIndex = 8;
             this.cmdCancel.Text = "Cancel";
             this.cmdCancel.UseVisualStyleBackColor = true;
+            this.cmdCancel.Click += new System.EventHandler(this.cmdCancel_Click);
             // 
             // cmdOK
             // 
@@ -181,6 +182,45 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Accounts List Colors";
+            // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.txtAmountFormat);
+            this.groupBox9.Location = new System.Drawing.Point(37, 75);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(212, 44);
+            this.groupBox9.TabIndex = 4;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "Amount Format";
+            // 
+            // txtAmountFormat
+            // 
+            this.txtAmountFormat.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtAmountFormat.Location = new System.Drawing.Point(3, 16);
+            this.txtAmountFormat.Name = "txtAmountFormat";
+            this.txtAmountFormat.Size = new System.Drawing.Size(206, 20);
+            this.txtAmountFormat.TabIndex = 0;
+            this.txtAmountFormat.Text = "$#,###,##0.00";
+            // 
+            // chkShowAverage
+            // 
+            this.chkShowAverage.AutoSize = true;
+            this.chkShowAverage.Location = new System.Drawing.Point(154, 48);
+            this.chkShowAverage.Name = "chkShowAverage";
+            this.chkShowAverage.Size = new System.Drawing.Size(96, 17);
+            this.chkShowAverage.TabIndex = 3;
+            this.chkShowAverage.Text = "Show Average";
+            this.chkShowAverage.UseVisualStyleBackColor = true;
+            // 
+            // chkShowBalance
+            // 
+            this.chkShowBalance.AutoSize = true;
+            this.chkShowBalance.Location = new System.Drawing.Point(154, 29);
+            this.chkShowBalance.Name = "chkShowBalance";
+            this.chkShowBalance.Size = new System.Drawing.Size(95, 17);
+            this.chkShowBalance.TabIndex = 2;
+            this.chkShowBalance.Text = "Show Balance";
+            this.chkShowBalance.UseVisualStyleBackColor = true;
             // 
             // pic1B
             // 
@@ -278,16 +318,32 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Password Protect Data File";
             // 
-            // button1
+            // label14
             // 
-            this.button1.Location = new System.Drawing.Point(554, 81);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(46, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Test";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Visible = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(17, 86);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(327, 13);
+            this.label14.TabIndex = 9;
+            this.label14.Text = "If you leave this blank, the data file will be human-readable/editable.";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(85, 59);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(98, 13);
+            this.label13.TabIndex = 8;
+            this.label13.Text = "Re-Enter Password";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(85, 27);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(81, 13);
+            this.label12.TabIndex = 7;
+            this.label12.Text = "Enter Password";
             // 
             // txtPwd2
             // 
@@ -306,6 +362,17 @@
             this.txtPwd.PasswordChar = '#';
             this.txtPwd.Size = new System.Drawing.Size(149, 26);
             this.txtPwd.TabIndex = 5;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(554, 81);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(46, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Test";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // chkTimestamp
             // 
@@ -369,6 +436,71 @@
             this.groupBox7.TabIndex = 7;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Balance Action Type Descriptions";
+            // 
+            // cmbDesc_Nothing
+            // 
+            this.cmbDesc_Nothing.FormattingEnabled = true;
+            this.cmbDesc_Nothing.Items.AddRange(new object[] {
+            "Nothing",
+            "Inquiry",
+            "View",
+            "Status",
+            "-DISABLE-"});
+            this.cmbDesc_Nothing.Location = new System.Drawing.Point(81, 120);
+            this.cmbDesc_Nothing.Name = "cmbDesc_Nothing";
+            this.cmbDesc_Nothing.Size = new System.Drawing.Size(112, 21);
+            this.cmbDesc_Nothing.TabIndex = 18;
+            this.cmbDesc_Nothing.Text = "Nothing";
+            // 
+            // cmbDesc_Decrease
+            // 
+            this.cmbDesc_Decrease.FormattingEnabled = true;
+            this.cmbDesc_Decrease.Items.AddRange(new object[] {
+            "Decrease",
+            "DEC",
+            "Remove",
+            "Ship",
+            "Debit",
+            "Pay-out",
+            "-DISABLE-"});
+            this.cmbDesc_Decrease.Location = new System.Drawing.Point(81, 95);
+            this.cmbDesc_Decrease.Name = "cmbDesc_Decrease";
+            this.cmbDesc_Decrease.Size = new System.Drawing.Size(112, 21);
+            this.cmbDesc_Decrease.TabIndex = 17;
+            this.cmbDesc_Decrease.Text = "Decrease";
+            // 
+            // cmbDesc_Increase
+            // 
+            this.cmbDesc_Increase.FormattingEnabled = true;
+            this.cmbDesc_Increase.Items.AddRange(new object[] {
+            "Increase",
+            "INC",
+            "Buy-In",
+            "Credit",
+            "Receive",
+            "-DISABLE-"});
+            this.cmbDesc_Increase.Location = new System.Drawing.Point(81, 69);
+            this.cmbDesc_Increase.Name = "cmbDesc_Increase";
+            this.cmbDesc_Increase.Size = new System.Drawing.Size(112, 21);
+            this.cmbDesc_Increase.TabIndex = 16;
+            this.cmbDesc_Increase.Text = "Increase";
+            // 
+            // cmbDesc_Count
+            // 
+            this.cmbDesc_Count.FormattingEnabled = true;
+            this.cmbDesc_Count.Items.AddRange(new object[] {
+            "Count",
+            "Inventory",
+            "Correction",
+            "New Balance",
+            "Starting Balance",
+            "Score",
+            "-DISABLE-"});
+            this.cmbDesc_Count.Location = new System.Drawing.Point(81, 43);
+            this.cmbDesc_Count.Name = "cmbDesc_Count";
+            this.cmbDesc_Count.Size = new System.Drawing.Size(112, 21);
+            this.cmbDesc_Count.TabIndex = 15;
+            this.cmbDesc_Count.Text = "Count";
             // 
             // label11
             // 
@@ -476,71 +608,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Count";
             // 
-            // cmbDesc_Count
-            // 
-            this.cmbDesc_Count.FormattingEnabled = true;
-            this.cmbDesc_Count.Items.AddRange(new object[] {
-            "Count",
-            "Inventory",
-            "Correction",
-            "New Balance",
-            "Starting Balance",
-            "Score",
-            "-DISABLE-"});
-            this.cmbDesc_Count.Location = new System.Drawing.Point(81, 43);
-            this.cmbDesc_Count.Name = "cmbDesc_Count";
-            this.cmbDesc_Count.Size = new System.Drawing.Size(112, 21);
-            this.cmbDesc_Count.TabIndex = 15;
-            this.cmbDesc_Count.Text = "Count";
-            // 
-            // cmbDesc_Increase
-            // 
-            this.cmbDesc_Increase.FormattingEnabled = true;
-            this.cmbDesc_Increase.Items.AddRange(new object[] {
-            "Increase",
-            "INC",
-            "Buy-In",
-            "Credit",
-            "Receive",
-            "-DISABLE-"});
-            this.cmbDesc_Increase.Location = new System.Drawing.Point(81, 69);
-            this.cmbDesc_Increase.Name = "cmbDesc_Increase";
-            this.cmbDesc_Increase.Size = new System.Drawing.Size(112, 21);
-            this.cmbDesc_Increase.TabIndex = 16;
-            this.cmbDesc_Increase.Text = "Increase";
-            // 
-            // cmbDesc_Decrease
-            // 
-            this.cmbDesc_Decrease.FormattingEnabled = true;
-            this.cmbDesc_Decrease.Items.AddRange(new object[] {
-            "Decrease",
-            "DEC",
-            "Remove",
-            "Ship",
-            "Debit",
-            "Pay-out",
-            "-DISABLE-"});
-            this.cmbDesc_Decrease.Location = new System.Drawing.Point(81, 95);
-            this.cmbDesc_Decrease.Name = "cmbDesc_Decrease";
-            this.cmbDesc_Decrease.Size = new System.Drawing.Size(112, 21);
-            this.cmbDesc_Decrease.TabIndex = 17;
-            this.cmbDesc_Decrease.Text = "Decrease";
-            // 
-            // cmbDesc_Nothing
-            // 
-            this.cmbDesc_Nothing.FormattingEnabled = true;
-            this.cmbDesc_Nothing.Items.AddRange(new object[] {
-            "Nothing",
-            "Inquiry",
-            "View",
-            "Status",
-            "-DISABLE-"});
-            this.cmbDesc_Nothing.Location = new System.Drawing.Point(81, 120);
-            this.cmbDesc_Nothing.Name = "cmbDesc_Nothing";
-            this.cmbDesc_Nothing.Size = new System.Drawing.Size(112, 21);
-            this.cmbDesc_Nothing.TabIndex = 18;
-            this.cmbDesc_Nothing.Text = "Nothing";
-            // 
             // chkWholeNumbers
             // 
             this.chkWholeNumbers.AutoSize = true;
@@ -561,26 +628,6 @@
             this.chkKeepTime.Text = "Keep Time";
             this.chkKeepTime.UseVisualStyleBackColor = true;
             this.chkKeepTime.CheckedChanged += new System.EventHandler(this.chkKeepTime_CheckedChanged);
-            // 
-            // chkShowBalance
-            // 
-            this.chkShowBalance.AutoSize = true;
-            this.chkShowBalance.Location = new System.Drawing.Point(154, 29);
-            this.chkShowBalance.Name = "chkShowBalance";
-            this.chkShowBalance.Size = new System.Drawing.Size(95, 17);
-            this.chkShowBalance.TabIndex = 2;
-            this.chkShowBalance.Text = "Show Balance";
-            this.chkShowBalance.UseVisualStyleBackColor = true;
-            // 
-            // chkShowAverage
-            // 
-            this.chkShowAverage.AutoSize = true;
-            this.chkShowAverage.Location = new System.Drawing.Point(154, 48);
-            this.chkShowAverage.Name = "chkShowAverage";
-            this.chkShowAverage.Size = new System.Drawing.Size(96, 17);
-            this.chkShowAverage.TabIndex = 3;
-            this.chkShowAverage.Text = "Show Average";
-            this.chkShowAverage.UseVisualStyleBackColor = true;
             // 
             // groupBox8
             // 
@@ -657,44 +704,6 @@
             this.tabPage1.Text = "Input";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.groupBox1);
-            this.tabPage3.Controls.Add(this.groupBox2);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(618, 205);
-            this.tabPage3.TabIndex = 3;
-            this.tabPage3.Text = "Lists";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(85, 27);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(81, 13);
-            this.label12.TabIndex = 7;
-            this.label12.Text = "Enter Password";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(85, 59);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(98, 13);
-            this.label13.TabIndex = 8;
-            this.label13.Text = "Re-Enter Password";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(17, 86);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(327, 13);
-            this.label14.TabIndex = 9;
-            this.label14.Text = "If you leave this blank, the data file will be human-readable/editable.";
-            // 
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.txtAmount);
@@ -713,24 +722,16 @@
             this.txtAmount.Size = new System.Drawing.Size(196, 20);
             this.txtAmount.TabIndex = 0;
             // 
-            // groupBox9
+            // tabPage3
             // 
-            this.groupBox9.Controls.Add(this.txtAmountFormat);
-            this.groupBox9.Location = new System.Drawing.Point(37, 75);
-            this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(212, 44);
-            this.groupBox9.TabIndex = 4;
-            this.groupBox9.TabStop = false;
-            this.groupBox9.Text = "Amount Format";
-            // 
-            // txtAmountFormat
-            // 
-            this.txtAmountFormat.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtAmountFormat.Location = new System.Drawing.Point(3, 16);
-            this.txtAmountFormat.Name = "txtAmountFormat";
-            this.txtAmountFormat.Size = new System.Drawing.Size(206, 20);
-            this.txtAmountFormat.TabIndex = 0;
-            this.txtAmountFormat.Text = "$#,###,##0.00";
+            this.tabPage3.Controls.Add(this.groupBox1);
+            this.tabPage3.Controls.Add(this.groupBox2);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(618, 205);
+            this.tabPage3.TabIndex = 3;
+            this.tabPage3.Text = "Lists";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // frmSettings
             // 
@@ -751,6 +752,8 @@
             this.panel2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic1B)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic1A)).EndInit();
             this.groupBox2.ResumeLayout(false);
@@ -770,11 +773,9 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            this.tabPage3.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
-            this.groupBox9.ResumeLayout(false);
-            this.groupBox9.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

@@ -163,6 +163,12 @@ namespace Uni_Books
                 return 0;
             }
         }
+
+        private void cmdCancel_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Cancel;
+            this.Close();
+        }
     }
 
 
