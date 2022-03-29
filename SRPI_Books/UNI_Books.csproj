@@ -115,9 +115,15 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="SAMPLES\Accounts_Data.dat" />
-    <None Include="SAMPLES\First_Aid_Kit_INV.dat" />
-    <None Include="SAMPLES\UNI-Books_WT-1-First_Aid.docx" />
+    <None Include="SAMPLES\Accounts_Data.dat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="SAMPLES\First_Aid_Kit_INV.dat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="SAMPLES\UNI-Books_WT-1-First_Aid.docx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

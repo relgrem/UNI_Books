@@ -12,3 +12,6 @@ C:\Users\WE_R!!!\source\repos\SRPI_Books\SRPI_Books\obj\Debug\UNI_Books.csproj.G
 C:\Users\WE_R!!!\source\repos\SRPI_Books\SRPI_Books\obj\Debug\UNI_Books.csproj.CoreCompileInputs.cache
 C:\Users\WE_R!!!\source\repos\SRPI_Books\SRPI_Books\obj\Debug\Uni_Book.exe
 C:\Users\WE_R!!!\source\repos\SRPI_Books\SRPI_Books\obj\Debug\Uni_Book.pdb
+C:\Users\WE_R!!!\source\repos\SRPI_Books\SRPI_Books\bin\Debug\SAMPLES\Accounts_Data.dat
+C:\Users\WE_R!!!\source\repos\SRPI_Books\SRPI_Books\bin\Debug\SAMPLES\First_Aid_Kit_INV.dat
+C:\Users\WE_R!!!\source\repos\SRPI_Books\SRPI_Books\bin\Debug\SAMPLES\UNI-Books_WT-1-First_Aid.docx
